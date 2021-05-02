@@ -1,23 +1,78 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+import React from "react";
+import Card from "../src/cards/Card";
+import "./App.css";
 
 function App() {
+  const ClassRoomArray = [
+    {
+      frontSide: "Welcome Thanmayeee,Thank you so much ",
+      backSide: "Shritha",
+    },
+    {
+      frontSide: "Hiii  Codder Shraddha , Just want to try",
+      backSide: " Hi Shraddha,How are u welcome to programming ",
+    },
+    {
+      frontSide: "Shraddha",
+      backSide: " Let me help u ,Please give me a chance",
+    },
+    {
+      frontSide: "Pappa",
+      backSide: " I dont need any help , I am top codder",
+    },
+    {
+      frontSide: "Thanu",
+      backSide: "Who are u, what the hell and heaven ,#Jaiii naveen poli",
+    },
+    {
+      frontSide: "Shritha",
+      backSide: " Pedda pichi pilla",
+    },
+    {
+      frontSide: " I dont need any help , I am top codder",
+      backSide: " Pedda pichi pilla",
+    },
+    {
+      frontSide: " I dont need any help , I am top codder",
+      backSide: " Pedda pichi pilla",
+    },
+    {
+      frontSide: "Hello every one ",
+      backSide: " Pedda pichi pilla",
+    },
+    {
+      frontSide: "Hello every one ",
+      backSide: " Pedda pichi pilla",
+    },
+    {
+      frontSide: "Thanu",
+      backSide: "Who are u, what the hell and heaven ,#Jaiii naveen poli",
+    },
+    {
+      frontSide: "Shritha",
+      backSide: " Pedda pichi pilla",
+    },
+    {
+      frontSide: " I dont need any help , I am top codder",
+      backSide: " Pedda pichi pilla",
+    },
+    {
+      frontSide: " I dont need any help , I am top codder",
+      backSide: " Pedda pichi pilla",
+    },
+    {
+      frontSide: "Hello every one ",
+      backSide: " Pedda pichi pilla",
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {ClassRoomArray.map((std, i) => {
+        return (
+          <Card key={i} frontSide={std.frontSide} backSide={std.backSide} />
+        );
+      })}
     </div>
   );
 }
